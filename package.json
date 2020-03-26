@@ -1,0 +1,30 @@
+{
+  "name": "rvm-burger",
+  "version": "1.0.0",
+  "description": "An app the creates burger eating using handlebars, expres, and sql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randrmoel/rvm-burger.git"
+  },
+  "keywords": [
+    "express",
+    "handlebars",
+    "sql",
+    "burgers"
+  ],
+  "author": "Robert V. Moel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/randrmoel/rvm-burger/issues"
+  },
+  "homepage": "https://github.com/randrmoel/rvm-burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "handlebars": "^4.7.3",
+    "mysql": "^2.18.1"
+  }
+}
