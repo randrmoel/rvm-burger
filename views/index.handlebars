@@ -1,0 +1,33 @@
+<h1>Burgers to Chomp!</h1>
+<h3>List of burgers to be eaten</h3>
+<ul>
+    {{#each burger}}
+        <li>
+            <p>
+                {{id}}. {{burger_name}}
+                <button data-burgerid = "{{id}}" class = "btn btn-warning delburger">Chomp It!</button>
+            </p>
+        </li>
+    {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form id="addburger" class = "btn btn-primary">
+    <textarea type = "text" name = "burgertype"></textarea>
+    <button type ="submit">Add Burger</button>
+</form>
+
+<h2>Eat Burger</h2>
+<form id = "eatburger" class = "btn btn-warning">
+    <select name = "id">
+        {{#each burger}}
+            <option value = "{{id}}"> {{burger}} </option> 
+        {{/each}}
+    </select>
+    <button type ="submit">Eat Burger</button>
+</form>
+
+<!--Button Listeners, event drivers -->
+<script type = "text/javascript">
+    
+</script>
