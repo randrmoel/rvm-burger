@@ -1,33 +1,50 @@
-<h1>Burgers to Chomp!</h1>
-<h3>List of burgers to be eaten</h3>
-<ul>
-    {{#each burger}}
-        <li>
-            <p>
-                {{id}}. {{burger_name}}
-                <button data-burgerid = "{{id}}" class = "btn btn-warning delburger">Chomp It!</button>
-            </p>
-        </li>
-    {{/each}}
-</ul>
+<div class = "container">
+    <div class ="row">
+        <div class = "center col-sm-12">
+            <img src =  "../public/assets/img/burger.jpg" alt ="Burger App Image">
+            <h1>Eat Da Burger!</h1>
+        </div>
+    </div> <!-- End Row -->
 
-<h2>Add a Burger</h2>
-<form id="addburger" class = "btn btn-primary">
-    <textarea type = "text" name = "burgertype"></textarea>
-    <button type ="submit">Add Burger</button>
-</form>
+    <div class = "row"> <!-- Contains Eaten and to Be Eaten -->
+        <div class ="col-sm-6">
+            <br>
+            <h2>Burgers Available to be Eaten!</h2>
+            <ul>
+                {{#each burger}}
+                    {{#unless devoured}}
+                        <li>
+                            {{id}}. {{burger_name}}
+                            <button type = "button" id = "eatit" class ="btn btn-primary" data-id ="{{this.id}}" data-newDevoured="{{devour}}">Devour It!</button>
+                        </li>
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div> <!--End of Column -- Burges to be eaten -->
 
-<h2>Eat Burger</h2>
-<form id = "eatburger" class = "btn btn-warning">
-    <select name = "id">
-        {{#each burger}}
-            <option value = "{{id}}"> {{burger}} </option> 
-        {{/each}}
-    </select>
-    <button type ="submit">Eat Burger</button>
-</form>
-
-<!--Button Listeners, event drivers -->
-<script type = "text/javascript">
-    
-</script>
+        <div class = "col-sm-6">
+            <h2>
+                Burgers That Have Been Eaten!
+            </h2>
+            {{#each burgers}}
+                {{#if devoured}}
+                    {{id}}. {{burger_name}}
+                {{/if}}
+            {{/each}}
+        </div>
+    </div> <!-- End of Row for To be eaten and Eaten -->
+    <div class = "row">
+        <div class = "col-sm-12">
+            <h2>Add A Burger</h2>
+   			<form class="create-form">
+                <div class="form-group">
+			        <p>
+                        Order a Burger and submit.
+                    </p>
+			        <input type="text" id="newburger" name="burger_name">
+			    </div>
+			    <button id="addburger" class="btn btn-primary" type="submit">Submit Burger</button>
+			</form>
+        </div>
+    </div> <!-- End of Row To Add Burger -->
+</div> <!--End of Main Container -->
