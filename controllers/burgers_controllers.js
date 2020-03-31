@@ -1,5 +1,4 @@
 var express = require("express");
-
 var router = express.Router();
 
 //Import the database functions for burgers
@@ -8,7 +7,7 @@ var brgr = require("../models/bgr_model.js");
 //Create routes and logic for routes
 //display all eaten or available burgers
 router.get("/", (req,res)=>{
-    brgr.all(function(data){
+    brgr.selectAll(function(data){
         var hbsObject = {
             brgrs: data
         };
@@ -17,15 +16,15 @@ router.get("/", (req,res)=>{
     });
 });
 
-//add a new burger to be devoured
+//add a new burger
 router.post("/api/brgrs", (req, res)=>{
-    brgr.create([
+    brgr.insertOne([
         "burger_name"
     ],[
         req.body.burger_name
-    ], (result)=>{
+    ], function(result){
         // send back new burger ack
-        res.json({id: result.instertId});
+        res.json({id: result.insertId});
     });
 });
 
@@ -33,7 +32,7 @@ router.put("/api/brgrs/:id", (req,res)=>{
     var condition = "id = "+ req.params.id;
     console.log("condition", condition);
 
-    brgr.update({
+    brgr.updateOne({
         devoured:req.body.devoured
     }, condition, (result)=>{
         if(result.changedRows == 0){

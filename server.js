@@ -2,7 +2,7 @@
 //set express
 var express = require("express");
 //set handbars
-var exhbs = require("express-handlebars");
+var exphbs = require("express-handlebars");
 
 var PORT = process.env.PORT|| 8080;
 

@@ -1,14 +1,14 @@
 $(function(){
-    $(".create-form").on("submit", function(event){
+    $("#addburger").on("click", function(event){
         event.preventDefault();
-
+        console.log("submit clicked");
         var newBurger ={
             burger_name: $("#newburger").val().trim()
         };
     
         $.ajax("/api/brgrs",{
             type: "POST",
-            data:newBurger
+            data: newBurger
         }).then(function(){
             console.log("add new burger");
             location.reload();
@@ -17,13 +17,11 @@ $(function(){
 
     $(".eatit").on("click", function(){
         event.preventDefault();
-        var devState = {
-            devoured: 1
-        };
+        var id =$(this).data("id");
 
         $.ajax("/api/brgrs/"+ id,{
             type:"PUT",
-            data:devState
+            data:{devoured:1}
         }).then(function(){
             console.log("Burger downed!");
             location.reload();

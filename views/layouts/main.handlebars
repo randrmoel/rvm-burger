@@ -2,24 +2,28 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-		
+      <!-- Added link to the jQuery Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-        <script src=<"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
-        <!--Bootstrap CSS -->
-        <link rel="stylesheet" href=<"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-        <!--Font Awesome -->
-        <link rel="stylesheet" href=<"https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
-        <!--Local Style Sheet -->
-        <link rel="stylesheet" href="../public/assets/css/burger_style.css" type="text/css" />
+    <!-- Added a link to Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-        <!--Load jQuery -->
-        <script src=<"https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-        <!--Load javascript -->
-        <script src = "../../public/assets/js/burger.js"></script>
+
 
 		<title>Eat Da Burger!</title>
 	</head>
 	<body>
+<div class = "container">
+    <div class ="row">
+        <div class = "center col-sm-12">
+            <img src =  "/assets/img/burger.jpg" alt ="Burger App Image">
+            <h1>Eat Da Burger!</h1>
+        </div>
+    </div> <!-- End Row -->
+
 		{{{ body }}}
+
+</div> <!--End of Main Container -->
+        <script src = "/assets/js/burger.js" type = "text/javascript"></script>
 	</body>
 </html>
