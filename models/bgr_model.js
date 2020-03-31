@@ -1,5 +1,6 @@
 var orm = require("../config/orm.js");
 
+//Use ORM with specific tables
 var brgr = {
     selectAll: function(cb){
         orm.selectAll("burgers", function(res){
