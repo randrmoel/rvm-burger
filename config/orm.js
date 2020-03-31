@@ -40,6 +40,7 @@ function objToSql(ob) {
   };
   
 var orm = {
+    // function for selecting all burgers and sending to requester
     selectAll: function(table, cb) {
         var queryString = "SELECT * FROM " + table;
         conn.query(queryString, function(err, result){
@@ -48,6 +49,7 @@ var orm = {
         }); 
     },
 
+    //function for inserting one burger
     insertOne: function(table, cols, vals, cb){
         var queryString = "INSERT INTO " + table;
         queryString += " (";
@@ -65,6 +67,7 @@ var orm = {
         });
     },
 
+    //Function for updating a burger after it's been devoured
     updateOne: function(table, objColVals, condition, cb){
         var queryString ="UPDATE "+ table;
         queryString += " SET ";
@@ -80,4 +83,5 @@ var orm = {
     }
 };
 
+//export ORM
 module.exports = orm;
