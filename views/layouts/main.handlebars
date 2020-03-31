@@ -7,23 +7,35 @@
 
     <!-- Added a link to Bootstrap-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <!--<link rel="stylesheet" type="text/css" href = "public/assets/css/styles.css">-->
+        <style>
+            title, h1, h2, h3, p, li {
+                color: white;
+                text-shadow: -.5px 0 lime, 0 .5px lime, .5px 0 lime, 0 -.5px lime;
+            }
 
+            .btn {
+                background-color: darkblue;
+                color:darkgray;
+                height: 35px;
+                padding:0% 1% 0% 1%;
+            }
 
+        </style>
 
 		<title>Eat Da Burger!</title>
 	</head>
-	<body>
-<div class = "container">
-    <div class ="row">
-        <div class = "center col-sm-12">
-            <img src =  "/assets/img/burger.jpg" alt ="Burger App Image">
-            <h1>Eat Da Burger!</h1>
-        </div>
-    </div> <!-- End Row -->
+	<body style = "background-image:url('/assets/img/burger.jpg')">
+        <div class = "container">
+        <div class ="row">
+            <div class = "center col-sm-12">
+                <h1 style="text-align:center; padding:0">Eat Da Burger!</h1>
+            </div>
+        </div> <!-- End Row -->
 
-		{{{ body }}}
+            {{{ body }}}
 
-</div> <!--End of Main Container -->
+        </div> <!--End of Main Container -->
         <script src = "/assets/js/burger.js" type = "text/javascript"></script>
 	</body>
 </html>
