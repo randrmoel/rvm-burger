@@ -5,7 +5,7 @@ $(function(){
         var newBurger ={
             burger_name: $("#newburger").val().trim()
         };
-    
+        if(newBurger.burger_name.length>0){
         $.ajax("/api/brgrs",{
             type: "POST",
             data: newBurger
@@ -13,6 +13,9 @@ $(function(){
             console.log("add new burger");
             location.reload();
         });
+    } else {
+        alert("Must enter burger name");
+    }
     });
 
     $(".eatit").on("click", function(){
