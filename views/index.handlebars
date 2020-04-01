@@ -1,14 +1,13 @@
 
     <div class = "row"> <!-- Contains Eaten and to Be Eaten -->
         <div class ="col-sm-6">
-            <br>
             <h2>Burgers Available to be Eaten!</h2>
             <ul>
                 {{#each brgrs}}
                     {{#unless devoured}}
                         <li>
-                            {{id}}. {{burger_name}}
                             <button type = "button" class ="eatit btn btn-primary" data-id ="{{this.id}}" data-newDevoured="{{this.devoured}}">Devour It!</button>
+                            {{burger_name}}
                         </li>
                     {{/unless}}
                 {{/each}}
@@ -23,7 +22,7 @@
                 {{#each brgrs}}
                     {{#if devoured}}
                     <li>
-                        {{id}}. {{burger_name}}
+                        {{burger_name}}
                     </li>
                     {{/if}}
                 {{/each}}

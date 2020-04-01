@@ -1,8 +1,13 @@
+li{
+    list-style-type: none;
+}
+
 title, h1, h2, h3, p, li {
     color: black;
     text-shadow: -.5px 0 red, 0 .5px red, .5px 0 red, 0 -.5px red;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bolder;
+    margin: 0 0 0 2%
 }
 
 .row {
@@ -16,5 +21,6 @@ title, h1, h2, h3, p, li {
     color:darkgray;
     height: 35px;
     padding:0% 1% 0% 1%;
+    margin: 0 1% 0 0;
 }
 
