@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/randrmoel/rvm-burger#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-handlebars": "^4.0.0",
     "handlebars": "^4.7.7",
     "mysql": "^2.18.1"
